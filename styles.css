@@ -1,10 +1,14 @@
+@font-face {
+  font-family: 'Norse Bold';
+  src: url('fonts/norse/Norsebold.otf') format('opentype');
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
   
   display: flex;
-  align-items: stretch;
 }
 
 /* Image sidebar */
@@ -12,32 +16,49 @@ body {
   position: relative;
 }
 
-img {
+.sidebar-img {
   display: block;
 
   object-fit: cover;
   width: 100%;
-
-   /* Preserve aspect ratio */
-  min-width: 100%;
-  min-height: 100%;
+  height: 100%;
 }
 
 /* Logo  */
-/* .logo {
+.logo {
+  font-family: 'Norse Bold'; /* Fix */ 
+  font-size: 100px;
 
-} */
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  position: absolute;
+  top: 22%;
+
+  width: 100%;
+  padding: 12px 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-img {
+  width: 110px;
+  height: auto;
+}
 
 /* Image credit text */
 .img-credit {
   position: absolute;
   bottom: 12px;
-  left: 30%
+  left: 30%;
 }
 
 .img-credit,
-.img-credit > a {
+.img-credit a {
   font-size: 12px;
+
   color: #d7d7d7d0;
 }
 
@@ -49,15 +70,16 @@ img {
 /* Text section */
 .text-section {
   background-color: #f9fafb;
+
   padding: 170px 130px 60px 48px;
 }
 
-.subtext {
+.text {
   font-size: 24px;
   font-weight: 600;
 }
 
-.subtext:nth-child(2) {
+.text:nth-child(2) {
   margin-bottom: 32px;
 }
 
@@ -88,31 +110,41 @@ form {
 }
 
 label {
-  color: #5C5C5C;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 2px;
+
+  color: #5C5C5C;
   
   width: 250px;
 }
 
 .form-row input {
-  box-sizing: border-box;
-
   font-size: 16px;
+
+  box-sizing: border-box;
 
   border: 1px solid #D6D9DC;
   border-radius: 3px;
 
   width: 100%;
   padding: 7px;
+
+  margin-top: 2px;
 }
+
 /* focus */
+.form-row input:focus {
+  border: 1px solid #0466c8;
+  box-shadow: 3px 3px 8px lightgray;
+}
 
 /* Invalid */
+.form-row input:invalid {
+  border: 1px solid #D55C5F;
+}
 
-
-/* Submit button */
+/* Create account & login buttons */
 .create-account-btn,
 .login {
   font-size: 18px;
@@ -127,14 +159,12 @@ label {
   background-color: #596D48;
   color: #fff;
 
-  max-width: fit-content;
   padding: 16px 54px;
   margin: 38px 48px;
 
   border: none;
   border-radius: 8px;
 
-  /* shadow */
   box-shadow: 3px 3px 5px lightgray;
 }
 

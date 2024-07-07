@@ -52,12 +52,12 @@ body {
 .img-credit {
   position: absolute;
   bottom: 12px;
-  left: 30%;
+  left: 32%;
 }
 
 .img-credit,
 .img-credit a {
-  font-size: 12px;
+  font-size: 14px;
 
   color: #d7d7d7d0;
 }
@@ -143,6 +143,15 @@ label {
 .form-row input:invalid {
   border: 1px solid #D55C5F;
 }
+
+/* Add helping text after the password input if it's invalid */
+label:has(#pwd:invalid)::after {
+  content: "* Passwords do not match";
+  color: #D55C5F;
+  font-weight: 500;
+  letter-spacing: 0px;
+}
+
 
 /* Create account & login buttons */
 .create-account-btn,

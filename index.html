@@ -34,19 +34,19 @@
 
         <div class="form-row">
           <label for="first_name">FIRST NAME
-            <input type="text" id="first_name" name="user_first_name">
+            <input type="text" id="first_name" name="user_first_name" required>
           </label>
           <label for="last_name">LAST NAME
-            <input type="text" id="last_name" name="user_last_name">
+            <input type="text" id="last_name" name="user_last_name" required>
           </label>
         </div>
 
         <div class="form-row">
           <label for="email">EMAIL
-            <input type="email" id="email" name="user_email">
+            <input type="email" id="email" name="user_email" required>
           </label>
           <label for="phone_number">PHONE NUMBER
-            <input type="tel" id="phone_number" name="user_phone_number">
+            <input type="tel" id="phone_number" name="user_phone_number" pattern="[0-9]{8,15}" required>
           </label>
         </div>
 

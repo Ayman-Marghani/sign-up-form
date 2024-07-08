@@ -148,7 +148,7 @@ label {
 /* Add helping text after an input if it's invalid */
 label:has(input:invalid)::after {
   position: absolute;
-  top: 50px;
+  top: 52px;
   left: 0px;
   content: "* Required";
   color: #D55C5F;
